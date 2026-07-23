@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luiz Cauã · Infraestrutura, Redes & Banco de Dados</title>
+  <meta name="description"
+    content="Portfólio de Luiz Cauã — estudante de ADS em transição para Infraestrutura, Redes e Banco de Dados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f1620%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%2357c785%22/></svg>">
+</head>
+
+<body>
+
+  <!-- fake boot / loading overlay -->
+  <div id="boot-screen" aria-hidden="true">
+    <pre id="boot-lines"></pre>
+  </div>
+
+  <!-- vertical traceroute nav -->
+  <nav class="tracenav" aria-label="Navegação por seções">
+    <div class="tracenav-title">traceroute</div>
+    <ol id="tracenav-list">
+      <li data-target="sobre"><span class="hop">1</span><span class="host">sobre</span></li>
+      <li data-target="skills"><span class="hop">2</span><span class="host">skills</span></li>
+      <li data-target="projetos"><span class="hop">3</span><span class="host">projetos</span></li>
+      <li data-target="contato"><span class="hop">4</span><span class="host">contato</span></li>
+    </ol>
+  </nav>
+
+  <!-- mobile top nav -->
+  <header class="topbar">
+    <span class="topbar-brand">luiz<span class="accent">@</span>infra</span>
+    <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#sobre" data-target="sobre">01 · sobre</a>
+    <a href="#skills" data-target="skills">02 · skills</a>
+    <a href="#projetos" data-target="projetos">03 · projetos</a>
+    <a href="#contato" data-target="contato">04 · contato</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          <span class="prompt">Luiz Cauã<span class="accent">:~$</span></span>
+          <span id="typed-line"></span><span class="cursor">▌</span>
+        </h1>
+        <p class="hero-desc">
+          Estudante de Análise e Desenvolvimento de Sistemas construindo o caminho para
+          <strong> Infraestrutura</strong>, <strong>Redes</strong> e <strong>Banco de Dados</strong> —
+          uma linha de código, uma sub-rede e uma query de cada vez.
+        </p>
+
+        <div class="status-panel" role="group" aria-label="Status do sistema">
+          <div class="status-row">
+            <span class="dot dot-online" aria-hidden="true"></span>
+            <span class="status-label">status</span>
+            <span class="status-value">disponível para oportunidades</span>
+          </div>
+          <div class="status-row">
+            <span class="dot dot-info" aria-hidden="true"></span>
+            <span class="status-label">localização</span>
+            <span class="status-value">Aracaju / SE</span>
+          </div>
+          <div class="status-row">
+            <span class="dot dot-info" aria-hidden="true"></span>
+            <span class="status-label">uptime da sessão</span>
+            <span class="status-value" id="session-uptime">00:00:00</span>
+          </div>
+        </div>
+
+        <div class="hero-links">
+          <a href="#projetos" class="btn btn-primary">ver projetos</a>
+          <a href="https://github.com/LuizCaua10" target="_blank" rel="noopener" class="btn btn-ghost">github ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <p class="section-eyebrow">01 / hop 1</p>
+      <h2 class="section-title">sobre</h2>
+      <div class="sobre-grid">
+        <div class="sobre-photo">
+          <img src="imagens/Foto-de-perfil-de-Luiz-Cauã.jpeg" alt="Foto de perfil de Luiz Cauã" loading="lazy" />
+        </div>
+        <div class="sobre-text">
+          <p>
+            Sou estudante de Análise e Desenvolvimento de Sistemas na Universidade Tiradentes, com foco
+            crescente em <strong>infraestrutura, redes de computadores e bancos de dados</strong>.
+          </p>
+          <p>
+            Tenho experiência com <strong>Java</strong> e conhecimentos básicos em <strong>SQL</strong> para
+            modelagem e consulta de dados — já apliquei os dois construindo um sistema real com
+            Spring Boot e PostgreSQL.
+          </p>
+          <p>
+            Valorizo trabalho em equipe, troca de conhecimento e resolver problemas técnicos de forma
+            estruturada — entendendo a base que sustenta os sistemas, não só a superfície.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="section-eyebrow">02 / hop 2</p>
+      <h2 class="section-title">skills <span class="mono-muted">// systemctl status</span></h2>
+
+      <div class="service-list">
+        <div class="service active">
+          <span class="dot dot-online"></span>
+          <span class="service-name">java.service</span>
+          <span class="service-state">active (running)</span>
+          <span class="service-desc">Lógica de programação e back-end</span>
+        </div>
+        <div class="service active">
+          <span class="dot dot-online"></span>
+          <span class="service-name">sql.service</span>
+          <span class="service-state">active (running)</span>
+          <span class="service-desc">Consultas e modelagem de bancos de dados</span>
+        </div>
+        <div class="service active">
+          <span class="dot dot-online"></span>
+          <span class="service-name">html-css-js.service</span>
+          <span class="service-state">active (running)</span>
+          <span class="service-desc">Estrutura, estilo e interatividade web</span>
+        </div>
+        <div class="service active">
+          <span class="dot dot-online"></span>
+          <span class="service-name">github.service</span>
+          <span class="service-state">active (running)</span>
+          <span class="service-desc">Controle de versão e colaboração</span>
+        </div>
+        <div class="service active">
+          <span class="dot dot-online"></span>
+          <span class="service-name">testes-automatizados.service</span>
+          <span class="service-state">active (running)</span>
+          <span class="service-desc">pytest, cobertura de regras de negócio e endpoints</span>
+        </div>
+        <div class="service learning">
+          <span class="dot dot-learning"></span>
+          <span class="service-name">redes.service</span>
+          <span class="service-state">activating (learning)</span>
+          <span class="service-desc">TCP/IP, roteamento e switching</span>
+        </div>
+      </div>
+      <p class="legend"><span class="dot dot-online"></span> em uso hoje &nbsp;&nbsp; <span
+          class="dot dot-learning"></span> em estudo agora</p>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <p class="section-eyebrow">03 / hop 3</p>
+      <h2 class="section-title">projetos</h2>
+
+      <div class="projetos-grid">
+        <article class="card card-featured">
+          <div class="card-head">
+            <span class="card-index">01</span>
+            <span class="card-featured-tag">projeto em equipe · Accenture</span>
+          </div>
+          <div class="tags"><span class="tag">Django REST</span><span class="tag">PostgreSQL</span><span
+              class="tag">Keycloak/SAML</span><span class="tag">Redis + Celery</span><span
+              class="tag">Docker</span><span class="tag">pytest</span></div>
+          <h3>GrowUp API — Gestão de Espaços Corporativos</h3>
+          <p>
+            Plataforma desenvolvida em equipe (Squad 25) durante a Residência II UNIT/Porto Digital para a
+            Accenture: centraliza o controle de salas e postos de trabalho, com mapeamento automático via IA
+            e sugestão inteligente de posições. Stack com Django REST Framework, PostgreSQL, autenticação
+            SAML via Keycloak, processamento assíncrono com Redis/Celery e frontend em React.
+          </p>
+          <p class="card-role">Minha parte: <strong>testes automatizados</strong> — contribuí para a suíte de 74 testes
+            (pytest-django + factory-boy) cobrindo modelos, regras de negócio, autenticação/RBAC e endpoints da API.</p>
+          <a href="https://github.com/tgnariz-maker/gestao-salas-accenture-residenciaII" target="_blank" rel="noopener"
+            class="card-link">ver código no GitHub ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="card-index">02</span>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span
+                class="tag">PostgreSQL</span><span class="tag">JPA</span></div>
+          </div>
+          <h3>Sistema de Biblioteca</h3>
+          <p>API para gestão de livros com Spring Boot, JPA/Hibernate e banco de dados PostgreSQL — meu primeiro projeto
+            unindo back-end e banco de dados relacional de verdade.</p>
+          <a href="https://github.com/LuizCaua10/sistema-biblioteca" target="_blank" rel="noopener"
+            class="card-link">ver código no GitHub ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="card-index">03</span>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Segurança</span><span
+                class="tag">Criptografia</span></div>
+          </div>
+          <h3>Criptografia RSA</h3>
+          <p>Aplicação em Java que gera pares de chaves e criptografa/descriptografa mensagens com RSA — um primeiro
+            passo prático em segurança da informação, área que conversa direto com redes.</p>
+          <a href="https://github.com/LuizCaua10/criptografia-rsa-java" target="_blank" rel="noopener"
+            class="card-link">ver código no GitHub ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <span class="card-index">04</span>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                class="tag">JavaScript</span></div>
+          </div>
+          <h3>Jogo de Carro</h3>
+          <p>Meu primeiro projeto de front-end: um jogo simples construído com HTML, CSS e JavaScript puro.</p>
+          <a href="https://luizcaua10.github.io/game/" target="_blank" rel="noopener" class="card-link">jogar ↗</a>
+        </article>
+
+        <article class="card card-future">
+          <div class="card-head">
+            <span class="card-index">05</span>
+          </div>
+          <h3>Em construção</h3>
+          <p>Próximos projetos. Volte em breve.</p>
+          <a href="https://github.com/LuizCaua10" target="_blank" rel="noopener" class="card-link">acompanhar no GitHub
+            ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <p class="section-eyebrow">04 / hop 4</p>
+      <h2 class="section-title">contato</h2>
+      <div class="contato-grid">
+        <div class="contato-info">
+          <p>Aberto a oportunidades em infraestrutura, redes, banco de dados ou desenvolvimento back-end. Manda uma
+            mensagem.</p>
+          <div class="social-links">
+            <a href="https://github.com/LuizCaua10" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/luiz-cau%C3%A3-santos-souza-734944368/" target="_blank"
+              rel="noopener">LinkedIn ↗</a>
+            <a href="https://wa.me/+5579999563880" target="_blank" rel="noopener">WhatsApp ↗</a>
+          </div>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="from_name" placeholder="Seu nome" required />
+            <span class="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="from_email" placeholder="seu@email.com" required />
+            <span class="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Sua mensagem</label>
+            <textarea id="mensagem" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+            <span class="error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">enviar mensagem</button>
+          <p class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Luiz Cauã Santos Souza</p>
+    <p class="footer-sub">Aracaju/SE · disponível para oportunidades</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo" class="hidden">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
