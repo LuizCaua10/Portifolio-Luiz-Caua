@@ -370,6 +370,12 @@ h1 em {
   line-height: 0.9;
   margin: 27px 0;
 }
+.contact-intro {
+  max-width: 520px;
+  margin: -8px 0 28px;
+  color: var(--muted);
+  font-size: 1rem;
+}
 .email {
   font-size: clamp(1.2rem, 3vw, 2.35rem);
   color: var(--mint);
