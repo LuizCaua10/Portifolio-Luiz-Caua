@@ -1,12 +1,208 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Portfólio de Luiz Cauã Souza, estudante de ADS e desenvolvedor em formação."><meta name="theme-color" content="#0a1020"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23162647'/%3E%3Cpath d='M19 16v32h23' fill='none' stroke='%235eead4' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M31 36l7 7 12-18' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"><title>Luiz Cauã — Desenvolvedor em formação</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
-<body><header class="nav wrap"><a class="brand" href="#inicio" aria-label="Voltar ao início">LC<span>.</span></a><nav aria-label="Navegação principal"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav><a class="nav-github" href="https://github.com/LuizCaua10" target="_blank" rel="noreferrer">GitHub ↗</a></header>
-<main><section id="inicio" class="hero wrap"><div class="hero-copy"><p class="eyebrow"><span></span> disponível para estágio em desenvolvimento</p><h1>Construo software com <em>propósito.</em></h1><p class="intro">Olá, eu sou <strong>Luiz Cauã Souza</strong>. Estudante de Análise e Desenvolvimento de Sistemas, com foco em transformar ideias em aplicações úteis, bem estruturadas e fáceis de usar.</p><div class="hero-actions"><a class="button primary" href="#projetos">Ver projetos <b>↓</b></a><a class="button secondary" href="https://www.linkedin.com/in/luiz-cau%C3%A3-souza-1b6371427/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div><aside class="signal-card"><div class="signal-top"><span>Perfil profissional</span><i></i></div><div class="monogram">LC</div><p class="signal-role">Desenvolvedor<br>em formação</p><div class="signal-meta"><span>ARACAJU, SE</span><span>ADS · 4º PERÍODO</span></div></aside></section>
-<section id="sobre" class="about wrap"><p class="section-kicker">01 / SOBRE MIM</p><div class="about-grid"><h2>Aprendizado constante, entregas reais.</h2><div><p>Estou desenvolvendo minha base em programação e construção de sistemas, unindo atenção à experiência de uso com boas práticas de código.</p><p>Tenho experiência acadêmica no projeto <strong>Gestão e Reserva de Salas</strong>, desenvolvido em parceria com a Accenture, e sigo evoluindo em Java, Spring Boot, banco de dados e desenvolvimento web.</p></div></div><div class="stack"><span>Java</span><span>Spring Boot</span><span>SQL</span><span>MySQL</span><span>Python</span><span>HTML &amp; CSS</span><span>Git &amp; GitHub</span></div></section>
-<section id="projetos" class="projects wrap"><div class="section-heading"><p class="section-kicker">02 / PROJETOS SELECIONADOS</p><p>Uma seleção do que venho construindo.</p></div><div class="project-grid"><article class="project featured"><div class="project-index">01</div><div class="project-content"><p class="type">JAVA · SPRING BOOT · MYSQL</p><h3>CRUD Java<br>com Login</h3><p>Aplicação para gerenciamento de pessoas com autenticação, rotas protegidas e persistência de dados.</p><a href="https://github.com/LuizCaua10/crud_java" target="_blank" rel="noreferrer">Ver no GitHub <b>↗</b></a></div><div class="code-window"><div><i></i><i></i><i></i></div><pre><span>POST</span> /login
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Luiz Cauã Souza, estudante de ADS e desenvolvedor em formação."
+    />
+    <meta name="theme-color" content="#0a1020" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23162647'/%3E%3Cpath d='M19 16v32h23' fill='none' stroke='%235eead4' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M31 36l7 7 12-18' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <title>Luiz Cauã — Desenvolvedor em formação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav wrap">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"
+        >LC<span>.</span></a
+      >
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a
+        ><a href="#contato">Contato</a>
+      </nav>
+      <a
+        class="nav-github"
+        href="https://github.com/LuizCaua10"
+        target="_blank"
+        rel="noreferrer"
+        >GitHub ↗</a
+      >
+    </header>
+    <main>
+      <section id="inicio" class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span></span> disponível para estágio em desenvolvimento
+          </p>
+          <h1>Construo software com <em>propósito.</em></h1>
+          <p class="intro">
+            Olá, eu sou <strong>Luiz Cauã Souza</strong>. Estudante de Análise e
+            Desenvolvimento de Sistemas, com foco em transformar ideias em
+            aplicações úteis, bem estruturadas e fáceis de usar.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projetos">Ver projetos <b>↓</b></a
+            ><a
+              class="button secondary"
+              href="https://www.linkedin.com/in/luiz-cau%C3%A3-souza-1b6371427/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn ↗</a
+            ><a
+              class="button resume-button"
+              href="Curriculo_Luiz_C_S_Souza.pdf"
+              download
+              >Baixar CV <b>↓</b></a
+            >
+          </div>
+        </div>
+        <aside class="signal-card">
+          <div class="signal-top"><span>Perfil profissional</span><i></i></div>
+          <div class="signal-badge">PORTFÓLIO / 2026</div>
+          <div class="monogram">LC</div>
+          <p class="signal-role">Desenvolvedor<br />em formação</p>
+          <div class="signal-meta">
+            <span>ARACAJU, SE</span><span>ADS · 4º PERÍODO</span>
+          </div>
+        </aside>
+      </section>
+      <section id="sobre" class="about wrap">
+        <p class="section-kicker">01 / SOBRE MIM</p>
+        <div class="about-grid">
+          <h2>Aprendizado constante, entregas reais.</h2>
+          <div>
+            <p>
+              Estou desenvolvendo minha base em programação e construção de
+              sistemas, unindo atenção à experiência de uso com boas práticas de
+              código.
+            </p>
+            <p>
+              Tenho experiência acadêmica no projeto
+              <strong>Gestão e Reserva de Salas</strong>, desenvolvido em
+              parceria com a Accenture, e sigo evoluindo em Java, Spring Boot,
+              banco de dados e desenvolvimento web.
+            </p>
+          </div>
+        </div>
+        <div class="work-note">
+          <span>EM CONSTRUÇÃO</span>
+          <p>Interfaces que deixam a tecnologia simples de usar.</p>
+        </div>
+        <div class="stack">
+          <span>Java</span><span>Spring Boot</span><span>SQL</span
+          ><span>MySQL</span><span>Python</span><span>HTML &amp; CSS</span
+          ><span>Git &amp; GitHub</span>
+        </div>
+      </section>
+      <section id="projetos" class="projects wrap">
+        <div class="projects-orbit" aria-hidden="true"></div>
+        <div class="section-heading">
+          <p class="section-kicker">02 / PROJETOS SELECIONADOS</p>
+          <p>Uma seleção do que venho construindo.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project featured">
+            <div class="project-index">01</div>
+            <div class="project-content">
+              <p class="type">JAVA · SPRING BOOT · MYSQL</p>
+              <h3>CRUD Java<br />com Login</h3>
+              <p>
+                Aplicação para gerenciamento de pessoas com autenticação, rotas
+                protegidas e persistência de dados.
+              </p>
+              <a
+                href="https://github.com/LuizCaua10/crud_java"
+                target="_blank"
+                rel="noreferrer"
+                >Ver no GitHub <b>↗</b></a
+              >
+            </div>
+            <div class="code-window">
+              <div><i></i><i></i><i></i></div>
+              <pre><span>POST</span> /login
 
 email: <b>"usuario@email.com"</b>
 senha: <b>"••••••••"</b>
 
-<span class="success">✓ autenticado</span></pre></div></article><article class="project"><div class="project-index">02</div><p class="type">JAVA · SEGURANÇA</p><h3>Criptografia RSA</h3><p>Implementação em Java para estudar os fundamentos da criptografia assimétrica.</p><a href="https://github.com/LuizCaua10/criptografia-rsa-java" target="_blank" rel="noreferrer">Repositório <b>↗</b></a></article><article class="project"><div class="project-index">03</div><p class="type">PYTHON · LÓGICA</p><h3>Game</h3><p>Projeto desenvolvido para praticar lógica de programação e estruturação de código.</p><a href="https://github.com/LuizCaua10/game" target="_blank" rel="noreferrer">Repositório <b>↗</b></a></article></div></section>
-<section class="focus wrap"><p class="section-kicker">03 / AGORA</p><div><p class="focus-label">EM DESENVOLVIMENTO</p><h2>Buscando uma oportunidade para crescer em equipe e gerar impacto com tecnologia.</h2></div></section><section id="contato" class="contact wrap"><p class="section-kicker">04 / CONTATO</p><h2>Vamos conversar?</h2><a class="email" href="mailto:caua.new09@gmail.com">caua.new09@gmail.com <b>↗</b></a><div class="contact-links"><a href="https://github.com/LuizCaua10" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/luiz-cau%C3%A3-souza-1b6371427/" target="_blank" rel="noreferrer">LinkedIn</a></div></section></main><footer class="wrap"><span>© 2026 Luiz Cauã Souza</span><span>Feito com intenção.</span></footer></body></html>
+<span class="success">✓ autenticado</span></pre>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-index">02</div>
+            <p class="type">JAVA · SEGURANÇA</p>
+            <h3>Criptografia RSA</h3>
+            <p>
+              Implementação em Java para estudar os fundamentos da criptografia
+              assimétrica.
+            </p>
+            <a
+              href="https://github.com/LuizCaua10/criptografia-rsa-java"
+              target="_blank"
+              rel="noreferrer"
+              >Repositório <b>↗</b></a
+            >
+          </article>
+          <article class="project">
+            <div class="project-index">03</div>
+            <p class="type">PYTHON · LÓGICA</p>
+            <h3>Game</h3>
+            <p>
+              Projeto desenvolvido para praticar lógica de programação e
+              estruturação de código.
+            </p>
+            <a
+              href="https://github.com/LuizCaua10/game"
+              target="_blank"
+              rel="noreferrer"
+              >Repositório <b>↗</b></a
+            >
+          </article>
+        </div>
+      </section>
+      <section class="focus wrap">
+        <p class="section-kicker">03 / AGORA</p>
+        <div>
+          <p class="focus-label">EM DESENVOLVIMENTO</p>
+          <h2>
+            Buscando uma oportunidade para crescer em equipe e gerar impacto com
+            tecnologia.
+          </h2>
+        </div>
+      </section>
+      <section id="contato" class="contact wrap">
+        <p class="section-kicker">04 / CONTATO</p>
+        <h2>Vamos conversar?</h2>
+        <a class="email" href="mailto:caua.new09@gmail.com"
+          >caua.new09@gmail.com <b>↗</b></a
+        >
+        <div class="contact-links">
+          <a
+            href="https://github.com/LuizCaua10"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          ><a
+            href="https://www.linkedin.com/in/luiz-cau%C3%A3-souza-1b6371427/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>© 2026 Luiz Cauã Souza</span><span>Feito com intenção.</span>
+    </footer>
+  </body>
+</html>
